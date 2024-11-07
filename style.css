@@ -49,3 +49,34 @@ url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12
                         height: 3rem;
                         margin-top: 2rem;
                         }
+                        const layout: {
+                            plot-bgcolor: getCSS('--bg-color'),
+                            paper-bgcolor: getCSS('--bg-color'),
+                            title: {
+                            text: 'Redes sociais com mais usuários no mundo',
+                            x: 0,
+                            font: {
+                            color: getCSS('--primary-color'),
+                            family: getCSS('--font'),
+                            size: 30
+                            }
+                        }
+                            }
+                        .grafico {
+                            margin-top: 3rem;
+                        }
+                        xaxis: {
+                            tickfont: tickConfig,
+                            tickfont: {
+                            color: getCSS('--primary-color'),
+                            size: 16,
+                            family: getCSS('--font')
+                            yaxis: {
+                                tickfont: tickConfig,
+                                title: {
+                                text: 'bilhões de usuários ativos',
+                                font: {
+                                color: getCSS('--secundary-color')
+                                }
+                                }
+                                }

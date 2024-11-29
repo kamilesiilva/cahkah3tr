@@ -1,28 +1,26 @@
-async function quantidadeUsuarios() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
+async function redesFavoritasMundo() {
+    const url = 'https://raw. githubusercontent.com/guilhermeonrails/api/main/redes-favoritas.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = Object.keys(dados)
-    const quantidadeUsuarios = Object.values(dados)
-    
-    console.log(dados)
+    console.log(dados);
+    const redes = Object.keys(dados)
+    const valores = Object.values(dados)
     }
     
-    quantidadeUsuarios()
+    redesFavoritasMundo()
     const data = [
         {
-        x: nomeDasRedes,
-        y: quantidadeUsuarios,
-        type: 'bar',
-        marker: {
-            color: getCSS('--primary-color')
-          }
+            values: valores,
+            labels: redes,
+            type: 'pie',
+            textinfo: 'label+percent'.
+            incluirTexto(`Embora o <span>Instagram</span> ocupe a quarta posição de redes sociais com mais usuários no mundo, ela é a rede social de que as pessoas mais gostam, seguida pelo WhatsApp e pelo Facebook. `)
         }
         ]
-        criarGrafico(data, layout)
         const layout = {
             plot_bgcolor: getCSS('--bg-color'),
             paper_bgcolor: getCSS('--bg-color'),
+            height: 700,
             title: {
                 text: 'Redes sociais com mais usuários no mundo',
                 x: 0,
@@ -32,6 +30,12 @@ async function quantidadeUsuarios() {
                     size: 30
                 }
         },
+        legend: {
+            font: {
+              color: getCSS('--primary-color'),
+              size: 16
+            }
+            },
         xaxis: {
             tickfont: tickConfig,
                 color: getCSS('--primary-color'),
@@ -54,4 +58,9 @@ async function quantidadeUsuarios() {
              }
           },
         }
-       import { getCSS, tickConfig } from "./common.js"
+        import {getCSS} from "./common.js"
+        const grafico = document.createElement('div')
+        grafico.className = 'grafico'
+        document.getElementById('graficos-container').appendChild(grafico)
+        Plotly.newPlot(grafico, data, layout)
+        import {getCSS, criarGrafico} from "./common.js"

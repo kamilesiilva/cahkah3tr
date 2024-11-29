@@ -12,11 +12,11 @@ url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12
         font-family: var(--font);
         height: 100vh;
         margin: 0;
-        }
-        header {
-            background-color: var(--primary-color);
-            text-align: center;
-            padding: 1px;
+    }
+    header {
+        background-color: var(--primary-color);
+        text-align: center;
+        padding: 1px;
         }
         h1 {
             font-size: 2rem;
@@ -28,55 +28,35 @@ url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12
                 justify-content: center;
                 font-weight: 400;
                 }
-                nav a {
+                nav a:hover {
                     text-decoration: none;
                     color: var(--bg-color);
                     margin: 0rem 2rem 3rem 0rem;
                     font-size: 12rem;
                 }
-                nav a:hover {
-                    text-decoration: underline;
-                    transform: scale(0.90);
-                    transition: transform 0.1s;
+                footer {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: var(--primary-color);
+                    color: var(--bg-color);
+                    width: 100%;
+                    height: 3rem;
+                    margin-top: 2rem;
                     }
-                    footer {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: var(--primary-color);
-                        color: var(--bg-color);
-                        width: 100%;
-                        height: 3rem;
-                        margin-top: 2rem;
+                    .graficos-container {
+                        margin: 5rem;
                         }
-                        const layout: {
-                            plot-bgcolor: getCSS('--bg-color'),
-                            paper-bgcolor: getCSS('--bg-color'),
-                            title: {
-                            text: 'Redes sociais com mais usuários no mundo',
-                            x: 0,
-                            font: {
-                            color: getCSS('--primary-color'),
-                            family: getCSS('--font'),
-                            size: 30
+                        .graficos-container__texto {
+                            font-size: 1.3rem;
+                            text-align: center;
+                            padding: 2rem;
+                            border: var(--secundary-color) solid 2px;
                             }
-                        }
-                            }
-                        .grafico {
-                            margin-top: 3rem;
-                        }
-                        xaxis: {
-                            tickfont: tickConfig,
-                            tickfont: {
-                            color: getCSS('--primary-color'),
-                            size: 16,
-                            family: getCSS('--font')
-                            yaxis: {
-                                tickfont: tickConfig,
-                                title: {
-                                text: 'bilhões de usuários ativos',
-                                font: {
-                                color: getCSS('--secundary-color')
+                            span {
+                                font-weight: bold;
+                                color: var(--secundary-color);
                                 }
-                                }
-                                }
+                                .grafico {
+                                    margin-top: 3rem;
+                                    }
